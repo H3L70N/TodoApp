@@ -10,9 +10,7 @@ from tasks.serializers import TaskSerializer
 @api_view(['GET'])
 def api_get(request, *args, **kwargs):
     data = request.GET
-
     print(data)
-
     return Response(data)
 
 
