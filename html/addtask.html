@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <form action="http://localhost:8000/api/post/" method="POST">
+    <form action="http://localhost:8000/api/tasks/create/" method="POST">
 
         <fieldset class="field">
             <legend>Tasks</legend>
@@ -33,8 +33,8 @@
                     <td><textarea name="description" id="description" class="fill description"></textarea> </td>
                 </tr>
                 <tr>
-                    <td><label for="due">Due date:</label></td>
-                    <td><input type="datetime-local" name="due" id="due" class="fill"></td>
+                    <td><label for="due_date">Due date:</label></td>
+                    <td><input type="datetime-local" name="due_date" id="due_date" class="fill"></td>
                 </tr>
                 <tr>
                     <td><label for="status">Status:</label></td>
