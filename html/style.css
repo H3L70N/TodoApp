@@ -45,7 +45,6 @@ body{
     background-color: rgb(185, 185, 219);
     font-size: larger;
     border-radius: 5px;
-    border: 1px black solid;
     border: 1px solid #333333;
     color: black;
 }
@@ -54,6 +53,25 @@ body{
     background-color: rgb(245, 245, 250);
 }
 
-.link{
-    width: 150px;
+
+.answeritem{
+    text-decoration: none;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 25pt;
+    background-color: rgb(185, 185, 219);
+    font-size: larger;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    color: black;
+}
+
+.answeritem:hover{
+    background-color: rgb(245, 245, 250);
+}
+
+.answer{
+    margin: 25pt;
 }
