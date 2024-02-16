@@ -75,3 +75,18 @@ body{
 .answer{
     margin: 25pt;
 }
+
+.tabela{
+    background-color:cadetblue;
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.cell{
+    padding: 10px;
+    text-align: center;
+}
+
+.head{
+    background-color: rgb(56, 125, 128);
+}
