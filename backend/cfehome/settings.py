@@ -27,6 +27,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Cors Allowed Origins
+
+CORS_ALLOWED_ORIGINS = [
+    'null',
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r'^http:\/\/localhost:\d+$',
+]
+
 
 # Application definition
 
@@ -40,9 +50,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'api',
     'tasks',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -124,3 +136,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication'
+    ]
+}
+

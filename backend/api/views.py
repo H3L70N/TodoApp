@@ -22,6 +22,9 @@ def api_post(request, *args, **kwargs):
     #     print(instance)
     #     return Response(serializer.data)
 
+    data = request.data
+    print(data)
+
     serializer = TaskSerializer(data=request.data)
     print(serializer.is_valid())
     data = request.data

@@ -18,9 +18,9 @@
         </div>
     </div>
 
-    <div id="form">
+    <div id="formdiv">
 
-        <form action="http://localhost:8000/api/tasks/create/" method="POST" id="formcreate">
+        <form action="" method="" id="formcreate">
 
             <fieldset class="field">
                 <legend>Tasks</legend>
@@ -49,7 +49,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" class="fill submit"></td>
+                        
+                        <td colspan="2"><button onclick="createTask()" type="button" class="fill submit">Create Task</button></td>
                     </tr>
 
                 </table>
@@ -62,9 +63,6 @@
 
     </div>
 
-    <button onclick="createTask()">
-        createTask
-    </button>
     
     <div id="creating">
 
@@ -80,9 +78,9 @@
             Menu
         </a>
 
-        <a href="addtask.html" class="answeritem">
+        <button onclick="formdisplay()" class="answeritem">
             Add another Task
-        </a>
+        </button>
 
      </div>
     <script src="../script/create.js"></script>
