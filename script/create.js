@@ -66,7 +66,3 @@ function formdisplay() {
   display("Creating Task...");
   form.reset();
 }
-
-function cleanForm(){
-  
-}
