@@ -2,6 +2,14 @@ import TaskDetails from "@/app/components/TaskDetails";
 import { notFound } from "next/navigation";
 import React from "react";
 
+interface Task {
+  id: number;
+  title: string;
+  description: string;
+  status: string;
+  due_date: string;
+}
+
 async function getTask(id: number) {
   const response = await fetch(`http://localhost:8000/api/tasks/${id}`);
   if (!response.ok) {
@@ -17,14 +25,16 @@ interface Props {
 }
 
 export default async function Details({ params }: Props) {
-  const task = await getTask(params.id);
+  const task: Task = await getTask(params.id);
 
   return (
     <>
       <TaskDetails
+        id={task.id}
         title={task.title}
         description={task.description}
         status={task.status}
+        due_date={task.due_date}
       />
     </>
   );

@@ -1,13 +1,16 @@
 import React from 'react'
+import Delete from './Delete';
 
 type Props = {
+    id: number;
     title: string;
     description: string;
     status: string;
+    due_date: string;
   };
   
 
-export default function TaskDetails( {title, description, status}:Props ) {
+export default function TaskDetails( {id, title, description, status, due_date}:Props ) {
     const getColor = (status: string) => {
         if (status === "complete") {
           return "via-teal-300";
@@ -19,14 +22,26 @@ export default function TaskDetails( {title, description, status}:Props ) {
           return;
         }
       };
+
+      const getDate = (due_date: string) => {
+        return due_date.replace("T", " ").replace("Z", "").replaceAll("-", "/");
+      }
+    
+      const date = getDate(due_date);
     
       const color = getColor(status);
+      const dateline = status==="cancelled" ? "line-through" : "";
     
       return (
         <>
           <div className="py-10 mb-16 mx-7 bg-slate-300 rounded-md">
             <div className="flex flex-row justify-between mx-7">
               <h2>{title}</h2>
+              <div>
+              <span className={"text-sm "+dateline} > Due: {date}</span>
+              <Delete id={id} />
+              </div>
+              
             </div>
     
             <div className="flex flex-row justify-between mx-7">
