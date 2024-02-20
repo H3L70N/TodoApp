@@ -25,11 +25,11 @@ export default async function Delete({ id }: Props) {
       throw new Error("Delete Failed");
     } else {
       router.refresh();
-      router.push("/tasks/list/")
+      router.push("/tasks/list/");
     }
   };
   return (
-    <button className="rounded-md ml-4" onClick={handleClick}>
+    <button className="rounded-md" onClick={handleClick}>
       <Image width={17} src={DeleteIcon} alt="" />
     </button>
   );
