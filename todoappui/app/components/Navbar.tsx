@@ -5,7 +5,7 @@ export default function Navbar() {
     <>
       <div className="navbar bg-base-100">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">TodoApp</a>
+          <Link href="/tasks" className="btn btn-ghost text-xl">TodoApp</Link>
         </div>
         <div className="flex-none">
           <Link  href="/tasks/list" className="btn border btn-ghost">
