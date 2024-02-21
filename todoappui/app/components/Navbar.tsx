@@ -8,7 +8,7 @@ export default function Navbar() {
           <a className="btn btn-ghost text-xl">TodoApp</a>
         </div>
         <div className="flex-none">
-          <Link  href="/tasks" className="btn border btn-ghost">
+          <Link  href="/tasks/list" className="btn border btn-ghost">
             List Tasks
           </Link>
         </div>

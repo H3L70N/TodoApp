@@ -17,10 +17,10 @@ export default function Footer() {
               beautifully described step by step with the required source code.
             </p>
             <div className=" flex flex-row justify-center items-center gap-x-4 mt-6 md:gap-x-10">
-              <Image src={Twitter} alt="" width={25} height={25}></Image>
-              <Image src={GitHub} alt="" width={25} height={25}></Image>
-              <Image src={Instagram} alt="" width={25} height={25}></Image>
-              <Image src={Whatsapp} alt="" width={25} height={25}></Image>
+              <Link href="https://twitter.com/h3l70n" > <Image src={Twitter} alt="" width={25} height={25}></Image> </Link>  
+              <Link href="https://github.com/H3L70N/TodoApp" > <Image src={GitHub} alt="" width={25} height={25}></Image> </Link>  
+              <Link href="https://www.instagram.com/h3l70n/" > <Image src={Instagram} alt="" width={25} height={25}></Image> </Link>  
+              <Link href="https://wa.me/+258842849400?text=Ola.%20Tenho%20Feedback%20sobre%20a%20sua%20aplicacao.%20Gostaria%20de%20dizer%20que%3A" > <Image src={Whatsapp} alt="" width={25} height={25}></Image> </Link>  
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@ export default function Footer() {
             <p className="text-white text-[14px]">Copyright 2024</p>
             <div className="flex flex-row justify-center items-center gap-x-5">
               <Link
-                href="#"
+                href="/tasks"
                 className="text-white font-normal hover:text-slate-300"
               >
                 Home
