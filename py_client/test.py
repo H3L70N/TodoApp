@@ -1,8 +1,8 @@
 import requests
 
-endpoint = "http://localhost:8000/api/tasks/create/"
+endpoint = "http://localhost:8000/api/tasks/2"
 
-response = requests.post(endpoint, json={"title": "Teste", "description": "New Task Test", "due_date": "2024-02-12T22:30", "status": "Pending"})
+response = requests.get(endpoint, json={"due_date": "2024-02-14T14:45Z", "status": "cancelled"})
 
 print(response.json())
 print(response.status_code)

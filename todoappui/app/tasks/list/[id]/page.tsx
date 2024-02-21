@@ -11,7 +11,10 @@ interface Task {
 }
 
 async function getTask(id: number) {
-  const response = await fetch(`http://localhost:8000/api/tasks/${id}`);
+  const response = await fetch(`http://localhost:8000/api/tasks/${id}`,{
+    next: {revalidate: 0},
+    cache: "no-cache",
+  });
   if (!response.ok) {
     notFound();
   }

@@ -29,8 +29,8 @@ export default async function Delete({ id }: Props) {
     }
   };
   return (
-    <button className="rounded-md" onClick={handleClick}>
-      <Image width={17} src={DeleteIcon} alt="" />
+    <button className="rounded-md bg-slate-400 btn btn-sm btn-ghost flex flex-row gap-2" onClick={handleClick}>
+      Delete <Image width={17} src={DeleteIcon} alt="" />
     </button>
   );
 }

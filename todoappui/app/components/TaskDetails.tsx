@@ -43,16 +43,19 @@ export default function TaskDetails({
       <div className="py-10 mb-16 mx-7 bg-slate-300 rounded-md">
         <div className="flex flex-row justify-between mx-7 gap-3">
           <h2>{title}</h2>
-          <div className="flex flex-row gap-2">
-            <span className={"text-sm " + dateline}> Due: {date}</span>
+          <div className="flex flex-col gap-2 min-h-fit">
+            
+            <span className={"text-xs " + dateline}> Due: {date}</span>
+            <div className="flex flex-col gap-y-2 my-4">
             <Delete id={id} />
-            <Complete id={id} status={status} />
+            {status ==="ongoing" && <Complete id={id} due_date={due_date} title={title} description={description} />}
+            </div>
           </div>
         </div>
 
         <div className="flex flex-row justify-between mx-7">
           <div
-            className={`min-h-64 flex bg-gradient-to-r from-slate-300 from-20% min-w-full via-100% to-40%  ${color} rounded-md`}
+            className={`flex bg-gradient-to-r from-slate-300 from-20% min-w-full via-100% to-40%  ${color} rounded-md`}
           >
             <p>{description}</p>
           </div>
